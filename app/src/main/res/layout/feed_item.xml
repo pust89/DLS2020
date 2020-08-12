@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="feed"
+            type="com.pustovit.dls2020.domain.Feed" />
+
+        <variable
+            name="feedClickListener"
+            type="com.pustovit.dls2020.presentation.home.ItemClickListener" />
+    </data>
+
+    <TextView
+        style="@style/style_main_title"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#8B03DAC5"
+        android:onClick="@{() -> feedClickListener.onClick(feed)}"
+        android:text="@{feed.title}"
+        tools:text="test test"></TextView>
+</layout>
